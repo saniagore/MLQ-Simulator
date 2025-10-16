@@ -26,7 +26,7 @@ class MLQSimulator:
     """
     Orquesta la simulación del algoritmo de planificación de colas multinivel (MLQ).
     """
-    def __init__(self, quantum1=3, quantum2=5):
+    def __init__(self, quantum1=1, quantum2=3):
         self.quantum1 = quantum1
         self.quantum2 = quantum2
         self.q1 = deque()
@@ -104,7 +104,7 @@ class MLQSimulator:
         if process.first_run_time == -1:
             process.first_run_time = self.current_time
 
-        quantum = float('inf') # Por defecto para SJF
+        quantum = float('inf') # Por defecto para FCFS
         if process.queue_num == 1:
             quantum = self.quantum1
         elif process.queue_num == 2:
