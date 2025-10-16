@@ -44,6 +44,7 @@ class MLQSimulator:
         try:
             with open(file_path, 'r') as f:
                 for line in f:
+                    # Ignorar comentarios y líneas vacías
                     if line.startswith('#') or not line.strip():
                         continue
                     parts = [p.strip() for p in line.split(';')]
@@ -173,7 +174,8 @@ class MLQSimulator:
 def main():
     input_filename = "mlq001.txt"
     output_filename = f"{os.path.splitext(input_filename)[0]}_output.txt"
-    
+
+    # Crear un archivo de entrada de ejemplo si no existe
     if not os.path.exists(input_filename):
         print(f"Creando archivo de entrada de ejemplo: {input_filename}")
         with open(input_filename, "w") as f:
