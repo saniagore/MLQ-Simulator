@@ -104,7 +104,7 @@ class MLQSimulator:
         if process.first_run_time == -1:
             process.first_run_time = self.current_time
 
-        quantum = float('inf') # Por defecto para FCFS
+        quantum = float('inf') # Por defecto para SJF
         if process.queue_num == 1:
             quantum = self.quantum1
         elif process.queue_num == 2:
