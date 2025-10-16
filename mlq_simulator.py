@@ -26,7 +26,7 @@ class MLQSimulator:
     """
     Orquesta la simulación del algoritmo de planificación de colas multinivel (MLQ).
     """
-    def __init__(self, quantum1=3, quantum2=3):
+    def __init__(self, quantum1=3, quantum2=5):
         self.quantum1 = quantum1
         self.quantum2 = quantum2
         self.q1 = deque()
